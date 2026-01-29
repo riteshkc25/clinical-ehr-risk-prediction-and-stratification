@@ -11,40 +11,12 @@ Data was queried from MIMIC-IV using Google BigQuery SQL to extract relevant cli
 Built CleanicalTextCleaner class usnig regex pattern-remove PHI placeholders, normalized whitespace, fixed punctuation etc. 
 
 # Named Entity Recognition (NER)
-Deployed BioClinicalBERT, a transformer based model to extract diagnoses, medications, procedures from free-text discharge notes.
+Deployed BioClinicalBERT, a transformer based model to extract diagnoses, medications, procedures from free-text discharge notes. Improved data completeness by 12.7%, especially on procedures.
 
 # Hybrid Data Integration
-Combine NER-extracted entities with sparse structured database fields. Improved data completeness by 12.7%, especially on procedures.
+Combined NER-extracted entities with sparse structured database fields.
 
 # Creating Structured Summary
-Created simple structured summary as follows:
-============================================================
-PATIENT SUMMARY - ID: 10000980-DS-26
-============================================================
-DEMOGRAPHICS:
-  • Subject ID: 10000980
-  • Age: 80 years
-  • Gender: female
-  • Length of Stay: 2 days
-DIAGNOSES (22 total):
-  1. kidney disease
-  2. peripheral vascular disease
-  3. diabetic retinopathy
-  4. heart failure
-  5. artery disease
-  ... and 17 more
-MEDICATIONS (22 total):
-  1. bromide
-  2. insulin
-  3. tor
-  4. carvedilol
-  5. torsemide
-  ... and 17 more
-SEVERITY ASSESSMENT:
-  • SOFA Score: nan
-  • OASIS Score: nan
-  • Data Completeness: 50%
-OUTCOME:
-  • Hospital Death: No
+<img width="523" height="583" alt="structured_patient_summary" src="https://github.com/user-attachments/assets/d3f8482a-f7d5-4e09-9f19-820235b579c6" />
 
 
